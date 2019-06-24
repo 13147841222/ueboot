@@ -1328,6 +1328,8 @@
             },
             // toolbar添加按钮事件
             formAdd() {
+                //清空原数据，防止编辑后未提交。导致脏数据
+                this.formGrid.form.data = {}
                 this.setFormColumns('add');
                 this.modal.editModal = true;
             },
